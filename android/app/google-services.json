@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "829645053195",
+    "firebase_url": "https://nas1-41450-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "nas1-41450",
+    "storage_bucket": "nas1-41450.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:829645053195:android:278f59456b51d7a826d60e",
+        "android_client_info": {
+          "package_name": "com.example.nas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "829645053195-9vjh3773ota7g9at27h5j4ajeej3spta.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBw9J28XSB1kO68k1qyzQbdv9T60GqmDwM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "829645053195-9vjh3773ota7g9at27h5j4ajeej3spta.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "829645053195-ktnq6sd8pe5teohr2vgsnef78fir7iql.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.nas"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
