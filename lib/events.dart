@@ -1,8 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:nas/create_event.dart';
 
-class EventsThree extends StatelessWidget {
+class Events extends StatelessWidget {
   final Stream<QuerySnapshot> events =
       FirebaseFirestore.instance.collection('DiningEvents').snapshots();
 
@@ -15,13 +16,19 @@ class EventsThree extends StatelessWidget {
         body: Center(
             //padding: const EdgeInsets.all(20.0),
             child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            SizedBox(
+              height: 20,
+            ),
             Text(
               'WELCOME TO JOIN ANY OF THE DINING EVENTS',
             ),
+            SizedBox(
+              height: 30,
+            ),
             Container(
-              height: 500,
+              height: 300,
               child: StreamBuilder<QuerySnapshot>(
                 stream: events,
                 builder: (
@@ -44,15 +51,35 @@ class EventsThree extends StatelessWidget {
                 },
               ),
             ),
+            SizedBox(
+              height: 30,
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => CreateEvent()));
+              },
+              child: Text("Create Event"),
+            )
           ],
         )));
   }
 }
 
 /*
- child: ListView.builder(
-                itemCount: 5,
-                itemBuilder: (context, index) {
-                  return Text('My text is here');
-                },
+Widget _buildListItem(BuildContext, DocumentSnapshot document) {
+    return ListTile(
+      title: Row(
+        children: [
+          Expanded(
+            child: Text(document['cuisine']),
+          ),
+          Container(
+            decoration: const BoxDecoration(color: Colors.black),
+            child: Text("Text 2 - Votes"),
+          ),
+        ],
+      ),
+    );
+  }
 */

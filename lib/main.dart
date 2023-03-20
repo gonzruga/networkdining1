@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:nas/events_three.dart';
+import 'package:nas/events.dart';
 import 'package:nas/log_screens/login_english.dart';
 import 'firebase_options.dart';
 
@@ -42,7 +42,7 @@ class _LandingPageState extends State<LandingPage> {
           stream: FirebaseAuth.instance.authStateChanges(),
           builder: (context, snapshot) {
             if (snapshot.hasData) {
-              return EventsThree();
+              return Events();
             } else {
               return LoginEnglish();
             }

@@ -66,6 +66,8 @@ class _LoginEnglishState extends State<LoginEnglish> {
               height: 30,
             ),
             ElevatedButton(
+              style:
+                  ElevatedButton.styleFrom(backgroundColor: Colors.blueAccent),
               onPressed: () {
                 FirebaseAuth.instance.signInWithEmailAndPassword(
                     email: emailController.text.trim(),
@@ -79,13 +81,15 @@ class _LoginEnglishState extends State<LoginEnglish> {
               height: 30,
             ),
             ElevatedButton(
+              style:
+                  ElevatedButton.styleFrom(backgroundColor: Colors.deepOrange),
               onPressed: () {
                 FirebaseAuth.instance.createUserWithEmailAndPassword(
                     email: emailController.text.trim(),
                     password: passwordController.text.trim());
               },
               child: Text(
-                "SignUp",
+                "SignUp (First Time)",
               ),
             ),
           ],
