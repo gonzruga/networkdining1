@@ -6,14 +6,14 @@ import "package:flutter_localizations/flutter_localizations.dart";
 import "package:flutter_localization/flutter_localization.dart";
 import "package:get/get.dart"; // For translation
 
-class LoginEnglish extends StatefulWidget {
-  const LoginEnglish({Key? key}) : super(key: key);
+class Login extends StatefulWidget {
+  const Login({Key? key}) : super(key: key);
 
   @override
-  State<LoginEnglish> createState() => _LoginEnglishState();
+  State<Login> createState() => _Login();
 }
 
-class _LoginEnglishState extends State<LoginEnglish> {
+class _Login extends State<Login> {
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
 

@@ -5,11 +5,8 @@ import 'package:get/route_manager.dart';
 import 'package:nas/events.dart';
 import 'package:nas/log_screens/login.dart';
 import 'firebase_options.dart';
-
 import "package:flutter_gen/gen_l10n/app_localizations.dart";
 import "package:flutter_localizations/flutter_localizations.dart";
-import "package:flutter_localization/flutter_localization.dart";
-
 import 'localStrings.dart';
 
 void main() async {
@@ -64,7 +61,7 @@ class _LandingPageState extends State<LandingPage> {
             if (snapshot.hasData) {
               return Events();
             } else {
-              return LoginEnglish();
+              return Login();
             }
           },
         ));
